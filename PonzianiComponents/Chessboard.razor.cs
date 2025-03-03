@@ -27,6 +27,11 @@ namespace PonzianiComponents
         [Parameter]
         public string Id { get; set; } = "board";
         /// <summary>
+        /// Set this to true if you want to darken the squares to highlight legal moves.
+        /// </summary>
+        [Parameter]
+        public bool EnableLegalMoveHighlight { get; set; } = true;
+        /// <summary>
         /// Position displayed on the board in <see href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation">Forsyth-Edwards-Notation</see>
         /// </summary>
         [Parameter]
@@ -416,7 +421,9 @@ namespace PonzianiComponents
         {
             Square sq = (Square)(8 * rank + file);
             string hc = IsHighlighted(sq) ? " pzHighlightSquare" : "";
-            if (legalMoves.FindIndex(m => m.To == sq) < 0)
+
+            //Just return the regular square color if you're not allowing legal move highlighting. Otherwise, check to darken the legal squares.
+            if (!EnableLegalMoveHighlight || legalMoves.FindIndex(m => m.To == sq) < 0)
                 return (IsDark(rank, file) ? "pzSquare pzDarkSquare" : "pzSquare pzLightSquare") + hc;
             else
                 return (IsDark(rank, file) ? "pzSquare pzDarkSquareGrey" : "pzSquare pzLightSquareGrey") + hc;

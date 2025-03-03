@@ -11,6 +11,7 @@ namespace PonzianiComponentsDemo.Client.Pages
         public bool ShowCoordinates { set; get; } = true;
         public int Size { set; get; }
         public bool Rotate { set; get; } = false;
+        public bool EnableLegalMoveHighlight { get; set; } = false;
         public string Fen { set; get; } = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
         public bool HighlightLastMove { set; get; } = false;
         public string OtherAttributes { set; get; } = string.Empty;

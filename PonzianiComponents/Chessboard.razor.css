@@ -12,6 +12,18 @@ div, img, span, p, tr, td {
   --highlight_color: yellow;
 }
 
+.legal-move-indicator {
+    width: 30%;
+    height: 30%;
+    background-color: #07872b7f; /* Semi-transparent green */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevents interaction issues */
+}
+
 .pzChessboard {
   width: var(--size);
   height: var(--size);
