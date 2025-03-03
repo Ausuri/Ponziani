@@ -57,6 +57,11 @@ namespace PonzianiComponents
         [Parameter]
         public bool ShowCoordinates { get; set; } = true;
         /// <summary>
+        /// Set this to true to show all pieces.
+        /// </summary>
+        [Parameter] 
+        public bool ShowPieces { get; set; } = true;
+        /// <summary>
         /// If true the board's orientation is reversed
         /// </summary>
         [Parameter]

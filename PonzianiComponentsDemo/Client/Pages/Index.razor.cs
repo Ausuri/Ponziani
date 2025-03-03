@@ -16,7 +16,7 @@ namespace PonzianiComponentsDemo.Client.Pages
         public string OtherAttributes { set; get; } = string.Empty;
         public string ColorDarkSquares { set; get; } = "#b58863";
         public string ColorLightSquares { set; get; } = "#f0d9b5";
-        public string HighlightColor { set; get; } = "yellow";
+        public string HighlightColor { set; get; } = "#0f0f0f";
     }
 
     public partial class Index
